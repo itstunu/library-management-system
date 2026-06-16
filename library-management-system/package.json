@@ -1,0 +1,12 @@
+{
+  "name": "library-management-system",
+  "version": "1.0.0",
+  "description": "A full-featured Library Management System",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build needed'"
+  },
+  "dependencies": {
+    "@vercel/postgres": "^0.10.0"
+  }
+}

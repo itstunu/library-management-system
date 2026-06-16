@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LibraryOS — Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="logo">
+      <span class="logo-icon">⬡</span>
+      <span class="logo-text">LibraryOS</span>
+    </div>
+    <button class="sidebar-close" id="sidebarClose">✕</button>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#" class="nav-link active" data-page="dashboard">
+      <span class="nav-icon">◈</span> Dashboard
+    </a></li>
+    <li><a href="#" class="nav-link" data-page="books">
+      <span class="nav-icon">◉</span> Books
+    </a></li>
+    <li><a href="#" class="nav-link" data-page="members">
+      <span class="nav-icon">◎</span> Members
+    </a></li>
+    <li><a href="#" class="nav-link" data-page="borrow">
+      <span class="nav-icon">◆</span> Borrow Book
+    </a></li>
+    <li><a href="#" class="nav-link" data-page="return">
+      <span class="nav-icon">◇</span> Return Book
+    </a></li>
+    <li><a href="#" class="nav-link" data-page="borrowings">
+      <span class="nav-icon">▣</span> All Borrowings
+    </a></li>
+  </ul>
+  <div class="sidebar-footer">
+    <span class="fine-rate">Fine: ৳5/day overdue</span>
+  </div>
+</nav>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay"></div>
+
+<!-- MAIN CONTENT -->
+<div class="main-wrap">
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <div class="topbar-title" id="topbarTitle">Dashboard</div>
+    <div class="topbar-actions">
+      <button class="btn btn-primary" id="topbarActionBtn" style="display:none"></button>
+    </div>
+  </header>
+
+  <main class="content" id="content">
+    <!-- Pages are injected here by JS -->
+  </main>
+</div>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <h3 id="modalTitle"></h3>
+      <button class="modal-close" id="modalClose">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
